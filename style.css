@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+aside {
+    height: 100vh;
+    background-color: black;
+    float: left;
+    width: 200px;
+    position: fixed;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    float: left;
+}
