@@ -23,7 +23,7 @@ h1 {
 /*** ASIDE MENU ***/
 
 aside {
-    width: 250px;
+    width: 220px;
     height: 100vh;
     background-color: black;
     float: left;
@@ -35,11 +35,10 @@ aside {
     padding-right: 20px;
     font-size: 13px;
     font-weight: 900;
+    padding-bottom: 80px;
 }
 
-.part-top {
-    width: 100%;
-}
+/*** PART TOP ASIDE MENU ***/
 
 #logo-desktop {
     height: 40px;
@@ -47,16 +46,18 @@ aside {
     cursor: pointer;
 }
 
-aside li {
+.part-top li {
     margin-bottom: 10px;
     border-left: 2px solid black;
 }
 
-aside li:hover {
-    border-left: 2px solid #1DB954;
+.part-top ul li:nth-child(2) a, .part-top ul li:nth-child(2) i {
+    color: white;
 }
 
-/*** PART TOP ASIDE MENU ***/
+.part-top li:nth-child(2) {
+    border-left: 2px solid #1DB954;
+}
 
 .part-top i {
     font-size: 20px;
@@ -64,8 +65,13 @@ aside li:hover {
     padding: 0 18px;
 }
 
-.part-top li a:hover, .part-top i:hover {
+.part-top li:hover {
     color: white;
+    transition: .2s ease-in;
+}
+
+.part-top i {
+    vertical-align: sub;
 }
 
 .part-top li:last-child {
@@ -123,7 +129,7 @@ aside li:hover {
 /*** MAIN CONTENT ***/
 
 main {
-    width: calc(100vw - 250px);
+    width: calc(100vw - 220px);
     height: 100%;
     background-color: red;
     float: right;
@@ -152,10 +158,27 @@ nav ul li a {
     color: lightgrey;
 }
 
+nav ul li a:hover {
+    color: white;
+    transition: .2s ease-in;
+}
+
 nav ul li:first-child a {
     color: white;
-    border-bottom: 2px solid #1DB954;
-    padding: 20px;
+    position: relative;
+}
+
+nav ul li:first-child a::before {
+    content: "";
+    height: 2px;
+    background-color: #1db954;
+    width: 30px;
+    position: absolute;
+    display: block;
+    left: 50%;
+    bottom: -10px;
+    margin-left: -15px;
+}
 }
 
 h1 {
@@ -200,13 +223,14 @@ h1 {
 
 footer {
     width: 100vw;
-    background-color: black;
+    background-color: #282828;
     position: fixed;
     bottom: 0;
     z-index: 1;
     display: flex;
     justify-content: space-between;
     color: white;
+    padding: 15px;
 }
 
 .left-part-footer {
@@ -216,4 +240,48 @@ footer {
 
 .left-part-footer img {
     height: 50px;
+}
+
+.title-song {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.favorite-song {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.center-part-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.center-part-footer i {
+    font-size: 16px;
+    margin: 0 15px;
+    vertical-align: middle;
+    font-weight: 600;
+}
+
+.fa-play-circle {
+    font-size: 30px !important;
+}
+
+.right-part-footer {
+    display: flex;
+    align-items: center;
+}
+
+.right-part-footer i {
+    margin: 0 5px;
+}
+
+.right-part-footer i:hover {
+    color: white;
+    transition: .2s ease-in;
+    cursor: pointer;
 }
