@@ -72,7 +72,7 @@ aside {
     padding: 0 18px;
 }
 
-.part-top li:hover {
+.part-top li:hover a, .part-top li:hover i {
     color: white;
     transition: .2s ease-in;
 }
@@ -194,6 +194,7 @@ nav ul li:first-child a::before {
     color: white;
     font-size: 40px;
     display: none;
+    cursor: pointer;
 }
 
 h1 {
@@ -234,6 +235,7 @@ h1 {
 .img {
     margin-right: 20px;
     position: relative;
+    opacity: 0.7;
 }
 
 .img .fa-play-circle {
@@ -246,13 +248,11 @@ h1 {
 
 .img:hover .fa-play-circle {
     display: block;
-    opacity: 1;
-    z-index: 1;
     color: white;
 }
 
 .img:hover {
-    opacity: 0.6;
+    opacity: 1;
     transition: .2s ease-in;
     cursor: pointer;
 }
@@ -272,7 +272,7 @@ footer {
     display: flex;
     justify-content: space-between;
     color: white;
-    padding: 15px;
+    padding: 10px 15px;
 }
 
 /*** LEFT PART ***/
@@ -284,6 +284,7 @@ footer {
 
 .left-part-footer img {
     height: 50px;
+    cursor: pointer;
 }
 
 .title-song {
@@ -295,6 +296,7 @@ footer {
 .title-song span {
     margin: 0 15px;
     font-size: 14px;
+    cursor: pointer
 }
 
 .title-song span:first-child{
@@ -308,6 +310,11 @@ footer {
     margin-left: 15px;
 }
 
+.favorite-song i:hover {
+    color: white;
+    cursor: pointer;
+}
+
 /*** MIDDLE PART ***/
 
 .center-part-footer {
@@ -318,9 +325,25 @@ footer {
 
 .center-part-footer i {
     font-size: 16px;
-    margin: 0 15px;
+    margin: 0 15px 10px 15px;
     vertical-align: middle;
     font-weight: 600;
+    transition: .2s ease-in;
+}
+
+.center-part-footer span {
+    font-size: 13px;
+}
+
+.center-part-footer input {
+    width: 75%;
+    vertical-align: middle;
+    margin: auto;
+}
+
+.center-part-footer i:hover {
+    color: white;
+    cursor: pointer;
 }
 
 .fa-play-circle {
@@ -348,6 +371,34 @@ footer {
     width: 70px;
 }
 
+.slider:hover {
+    opacity: 1.0;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: grey;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+/*** MEDIA QUERY ***/
+
 @media screen and (max-width: 958px) {
     nav ul {
         display: none;
@@ -361,12 +412,20 @@ footer {
         display: none;
     }
 
+    .right-part-footer .fa-bars, .fa-desktop {
+        display: none;
+    }
+
     main {
         width: 100%;
     }
 
     main {
         width: calc(100vw - 220px);
+    }
+
+    .created-for-you img {
+        width: 130px;
     }
 }
 
@@ -401,7 +460,11 @@ footer {
         display: none;
     }
 
-    .right-part-footer {
+    .right-part-footer input {
+        display: none;
+    }
+
+    .audio-control .fa-random, .audio-control .fa-redo-alt{
         display: none;
     }
 
@@ -415,5 +478,9 @@ footer {
 
     main {
         width: calc(100vw - 80px);
+    }
+
+    .time-played {
+        display: none;
     }
 }
