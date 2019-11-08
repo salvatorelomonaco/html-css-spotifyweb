@@ -9,9 +9,10 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <container>
+        <main>
 <!-- ASIDE MENU -->
             <aside>
+                
             <!-- PART TOP -->
                 <div class="part-top">
                     <img id="logo-desktop" src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="logo">
@@ -37,6 +38,7 @@
                         <h4>playlist</h4>
                     </div>
                 </div>
+
             <!-- PART BOTTOM -->
                 <div class="part-bottom">
                     <div class="download">
@@ -47,8 +49,8 @@
                     </div>
                 </div>
             </aside>
-<!-- MAIN CONTENT -->
-            <main>
+
+            <div id="main-content">
                 <nav>
                     <div id="menu-mobile">
                         <i class="fas fa-bars"></i>
@@ -153,43 +155,44 @@
                         </div>
                     </div>
                 </div>
-            </main>
+            </div>
+
+        </main>
 <!-- AUDIO MENU PART -->
-            <footer>
-            <!-- COVER ALBUM AND ARTIST -->
-                <div class="left-part-footer">
-                    <img src="https://i.scdn.co/image/7306d89ce986a58cf159abc03441a83ce7c710b2" alt="">
-                    <div class="title-song">
-                        <span>Lost</span>
-                        <span>Jorja Smith</span>
-                    </div>
-                    <div class="favorite-song">
-                        <i class="far fa-heart"></i>
-                    </div>
+        <footer>
+        <!-- COVER ALBUM AND ARTIST -->
+            <div class="left-part-footer">
+                <img src="https://i.scdn.co/image/7306d89ce986a58cf159abc03441a83ce7c710b2" alt="">
+                <div class="title-song">
+                    <span>Lost</span>
+                    <span>Jorja Smith</span>
                 </div>
-            <!-- MUSIC CONTROLS -->
-                <div class="center-part-footer">
-                    <div class="audio-control">
-                        <i class="fas fa-random"></i>
-                        <i class="fas fa-step-backward"></i>
-                        <i class="far fa-play-circle"></i>
-                        <i class="fas fa-step-forward"></i>
-                        <i class="fas fa-redo-alt"></i>
-                    </div>
-                    <div class="time-played">
-                        <span>1:00</span>
-                        <input type="range" class="slider" name="points" min="0" max="5">
-                        <span>4:00</span>
-                    </div>
+                <div class="favorite-song">
+                    <i class="far fa-heart"></i>
                 </div>
-            <!-- AUDIO CONTROLS -->
-                <div class="right-part-footer">
-                    <i class="fas fa-bars"></i>
-                    <i class="fas fa-desktop"></i>
-                    <i class="fas fa-volume-up"></i>
-                    <input type="range" name="points"  class="slider" min="0" max="10">
+            </div>
+        <!-- MUSIC CONTROLS -->
+            <div class="center-part-footer">
+                <div class="audio-control">
+                    <i class="fas fa-random"></i>
+                    <i class="fas fa-step-backward"></i>
+                    <i class="far fa-play-circle"></i>
+                    <i class="fas fa-step-forward"></i>
+                    <i class="fas fa-redo-alt"></i>
                 </div>
-            </footer>
-        </container>
+                <div class="time-played">
+                    <span>1:00</span>
+                    <input type="range" class="slider" name="points" min="0" max="5">
+                    <span>4:00</span>
+                </div>
+            </div>
+        <!-- AUDIO CONTROLS -->
+            <div class="right-part-footer">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-desktop"></i>
+                <i class="fas fa-volume-up"></i>
+                <input type="range" name="points"  class="slider" min="0" max="10">
+            </div>
+        </footer>
     </body>
 </html>
